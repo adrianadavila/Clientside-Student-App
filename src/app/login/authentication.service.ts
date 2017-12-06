@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class AuthenticationService {
     //URLs for CRUD operations
-    private authUrl = "http://localhost:8080/oauth/token";
+    private authUrl = "http://mvc-backend.us-east-2.elasticbeanstalk.com/oauth/token";
     private serverUsername = "studentapp";
     private serverPassword = "secret";
     private grantType = "password";

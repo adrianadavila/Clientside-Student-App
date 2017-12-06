@@ -13,7 +13,7 @@ import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 export class LogoutComponent implements OnInit{
   constructor(private route: ActivatedRoute, private router: Router, private authServices: AuthenticationService) { }
 
-  private usrname = null;
+  public usrname = null;
 
   ngOnInit(): void {
     this.getUsername();
