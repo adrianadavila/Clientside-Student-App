@@ -53,12 +53,11 @@ describe('Student Service', function () {
                     id: 26,
                     name: 'Katy',
                     major: 'Music',
-                    classes: {
-                      class_1: 'art',
-                      class_2: 'art1',
-                      class_3: 'art2',
-                      class_4: 'art3'
-                    }
+                  },
+                  {
+                    id: 27,
+                    name: 'Josh',
+                    major: 'Electrical Engineering',
                   }
                 ]
               })
@@ -70,7 +69,7 @@ describe('Student Service', function () {
 
         studentService.getAllStudents().subscribe((students: Student[])=>{
           expect(students.length).toBeDefined();
-          expect(students.length).toEqual(1);
+          expect(students.length).toEqual(2);
           expect(students[0].id).toEqual(26);
           done();
         })

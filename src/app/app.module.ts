@@ -11,6 +11,8 @@ import{LoginComponent} from './login/login.component';
 import{AuthenticationService} from './login/authentication.service';
 import { CanActivateAuthGuard } from './can-activate.authguard';
 import{LogoutComponent} from './logout/logout.component'
+import {TextbookComponent} from './student/component/textbook.component';
+import {TextbookService} from './student/services/textbook.service';
 
 //recently added routing module
 import { AppRoutingModule } from "./app-routing.module";
@@ -27,10 +29,12 @@ import { AppRoutingModule } from "./app-routing.module";
       AppComponent,
       StudentComponent,
       LoginComponent,
-      LogoutComponent
+      LogoutComponent,
+      TextbookComponent
     ],
     providers: [
         StudentService,
+        TextbookService,
         AuthenticationService,
         CanActivateAuthGuard
     ],

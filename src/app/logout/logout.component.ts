@@ -6,8 +6,9 @@ import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 @Component({
   selector: 'logout-app',
   template: `
-  <h2>Welcome, {{usrname}}<h2>
   <button (click)="logout()">Logout</button>
+  <h2>Welcome, Professor {{usrname}}<h2>
+
   `
 })
 export class LogoutComponent implements OnInit{

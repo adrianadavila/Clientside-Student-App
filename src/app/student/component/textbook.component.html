@@ -1,0 +1,52 @@
+
+<h3 >
+  Create New Textbook Checkout for {{studentName}}
+</h3>
+
+<div>
+ <form [formGroup]="textbookForm" (ngSubmit)="onTextbookFormSubmit()">
+  <table>
+    <tr><td>Enter Textbook Title</td><td><input formControlName="textbookTitle">
+	       <label *ngIf="textbookForm.get('textbookTitle').invalid && processValidation" [ngClass] = "'error'"> Title is required. </label>
+   	</td></tr>
+    <tr><td colspan="2">
+	    <button>CREATE</button>
+	</td></tr>
+  </table>
+ </form>
+
+ <br/>
+ <div *ngIf="statusCode; else processing">
+   <div *ngIf="statusCode === 201" [ngClass] = "'success'">
+	    Textbook added successfully.
+   </div>
+   <div *ngIf="statusCode === 409" [ngClass] = "'success'">
+        Student already exists.
+   </div>
+   <div *ngIf="statusCode === 204" [ngClass] = "'success'">
+        Textbook deleted successfully.
+   </div>
+   <div *ngIf="statusCode === 500" [ngClass] = "'error'">
+        Internal Server Error.
+   </div>
+ </div>
+ <ng-template #processing>
+	<img *ngIf="requestProcessing" src="assets/images/loading.gif">
+ </ng-template>
+</div>
+<h3>Student Textbook Details</h3>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Textbook Name</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let textbook of allTextbooks" >
+    <td>{{textbook.idtextbook}}</td>
+    <td>{{textbook.text_title}}</td>
+	  <td><button type="button" (click)="deleteTextbook(textbook.idtextbook)">Delete</button></td>
+  </tr>
+</table>
+
+<button (click)="goBack()">go back</button>
