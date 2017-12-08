@@ -10,10 +10,10 @@ import { Options } from 'selenium-webdriver/safari';
 @Injectable()
 export class StudentService {
     //URLs for CRUD operations
-    // allStudentsUrl = "http://mvc-backend.us-east-2.elasticbeanstalk.com/user/all-students";
-    // studentUrl = "http://mvc-backend.us-east-2.elasticbeanstalk.com/user/student";
-    allStudentsUrl = "http://localhost:8080/user/all-students";
-    studentUrl = "http://localhost:8080/user/student";
+    allStudentsUrl = "http://mvc-backend.us-east-2.elasticbeanstalk.com/user/all-students";
+    studentUrl = "http://mvc-backend.us-east-2.elasticbeanstalk.com/user/student";
+    // allStudentsUrl = "http://localhost:8080/user/all-students";
+    // studentUrl = "http://localhost:8080/user/student";
 
 	//Create constructor to get Http instance
 	constructor(private http:Http, private authService:AuthenticationService ) {

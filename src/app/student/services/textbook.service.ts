@@ -12,11 +12,12 @@ import { Text } from '@angular/compiler';
 export class TextbookService {
     //URLs for CRUD operations
     //GET all students
-    // allStudentsUrl = "http://mvc-backend.us-east-2.elasticbeanstalk.com/user/all-students";
-    // studentUrl = "http://mvc-backend.us-east-2.elasticbeanstalk.com/user/student";
-    allTextbooksUrl = "http://localhost:8080/user/all-textbook";
-    textbooktUrl = "http://localhost:8080/user/textbook";
-    textbookByStudentId = "http://localhost:8080/user/student-textbook-collection";
+    allTextbooksUrl = "http://mvc-backend.us-east-2.elasticbeanstalk.com/user/all-textbook";
+    textbooktUrl = "http://mvc-backend.us-east-2.elasticbeanstalk.com/user/textbook";
+    textbookByStudentId = "http://mvc-backend.us-east-2.elasticbeanstalk.com/user/student-textbook-collection";
+    // allTextbooksUrl = "http://localhost:8080/user/all-textbook";
+    // textbooktUrl = "http://localhost:8080/user/textbook";
+    // textbookByStudentId = "http://localhost:8080/user/student-textbook-collection";
 
 	//Create constructor to get Http instance
 	constructor(private http:Http, private authService:AuthenticationService ) {
